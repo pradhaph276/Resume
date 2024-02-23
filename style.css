@@ -1,0 +1,490 @@
+/* Home css start */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: gainsboro;
+    /* background-image: url(../Img/flower.jpg); */
+    
+}
+
+
+.nav-bar {
+    /* position: fixed; */
+
+    padding-bottom: 160px;
+}
+
+
+.float-left {
+    float: left;
+}
+
+
+.float-right {
+    float: right;
+}
+
+
+.margin-30{
+margin: 30px;
+}
+
+
+.circle-design i{
+    font-size: 25px;
+    padding-right: 15px;
+    color: #eea302;
+}
+
+.float-left b{
+    font-size: 25px;
+    padding-right: 10px;
+}
+.ui{
+    font-size: 15px;
+    color: #606060;
+}
+
+
+.float-right ul{
+    display: flex;
+    list-style-type: none;
+}
+
+
+.float-right ul li{
+    padding-right: 20px;
+    font-size: 17px;
+    font-weight: 700;
+    color: black;
+    border-right: 1px solid gray;
+    padding-left: 10px;
+}
+
+
+.d-flex{
+    display: flex;
+}
+
+
+.div-50per{
+width: 50%;
+}
+
+
+.container{
+    margin: 0 70px;
+}
+
+
+.lft-img img{
+    width: 80%;
+    height: 435px;
+    border-radius: 50%;
+    margin-left: 100px;
+}
+
+
+
+
+.mar-top50{
+    margin-top: 50px;
+
+}
+
+.rft-cont h1{
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.rft-cont h3{
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.rft-cont p {
+
+    width: 70%;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+
+.rft-cont{
+    margin-left: 20px;
+}
+
+.btn-section ul{
+    list-style-type: none;
+    display: flex;
+}
+
+
+.btn-section ul li{
+    padding-right: 30px;
+
+}
+
+
+.btn-section{
+    margin-top: 30px;
+}
+
+
+.round1-cirledesign{
+    width: 61px;
+    height: 63px;
+    display: inline-flex;
+    background-color: #eea302;
+    border-radius: 50%;
+    padding: 35px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: black;
+    text-decoration: none !important;
+    border: 1px solid black;
+   
+}
+
+.round2-cirledesign{
+    width: 61px;
+    height: 63px;
+    display: inline-flex;
+    background-color: #f25c2d;
+    border-radius: 50%;
+    padding: 35px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: black;
+    text-decoration: none !important;
+    border: 1px solid black;
+   
+}
+
+
+.round3-cirledesign{
+    width: 61px;
+    height: 63px;
+    display: inline-flex;
+    background-color: #78cfda;
+    border-radius: 50%;
+    padding: 35px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: black;
+    text-decoration: none !important;
+    border: 1px solid black;
+   
+}
+
+.round1-cirledesign:hover {
+    background-color: aliceblue;
+}
+
+.round2-cirledesign:hover {
+    background-color: aliceblue;
+}
+
+
+.round3-cirledesign:hover {
+    background-color: aliceblue;
+}
+
+
+.banner-area{
+padding-bottom: 150px;
+}
+
+
+.footer-area{
+
+    padding: 30px;
+    height: 100px;
+
+}
+
+.div-25per{
+width: 25%;
+float: left;
+
+}
+
+
+.div-25per h3{
+padding-bottom: 20px;
+}
+
+.fa-phone{
+    padding-right: 10px;
+}
+
+.fa-envelope{
+    padding-right: 10px;
+}
+
+
+.social-icon span{
+    padding-right: 20px;
+
+}
+
+.mar-top-20{
+    margin-top: 20px;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: unset;
+}
+/* Home css end */
+
+/* skills css strat */
+
+@keyframes progress {
+    0% { --percentage: 0; }
+    100% { --percentage: var(--value); }
+  }
+  
+  @property --percentage {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  [role="progressbar"] {
+    --percentage: var(--value);
+    --primary: #ffc71e;
+    --secondary: #0b0b0a;
+    --size: 155px;
+    animation: progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
+  
+  [role="progressbar"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+    mask: radial-gradient(white 55%, transparent 0);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(#0000 55%, #000 0);
+    -webkit-mask-mode: alpha;
+  }
+  
+  [role="progressbar"]::after {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    /* color: var(--primary); */
+  }
+  
+
+  
+
+  .progess-bar{
+    width: 100px;
+
+  }
+
+  .skill1{
+    margin-left: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+  }
+
+
+  .skill-area{
+    margin: 0 95px;
+    padding-bottom: 20px;
+  }
+
+  
+  .progess{
+    padding-right: 100px;
+  }
+
+
+  .second-section {
+      margin-top: 30px;
+  }
+
+ 
+  /* skills css strat */
+
+  /* Education css strat */
+  .box1{
+    border: 1px solid gray;
+        margin: 0 100px;
+        padding: 40px;
+        border-radius: 5px;
+        border-left: 3px solid #eea302;
+  }
+
+  .box{
+    border: 1px solid gray;
+        margin: 0 100px;
+        padding: 40px;
+        border-radius: 5px;
+      
+  }
+
+  .border-org-color{
+    border-left: 3px solid #eea302;
+  }
+
+
+  .border-gren-color{
+    border-left: 3px solid green;
+  }
+  .border-red-color{
+    border-left: 3px solid red;
+  }
+
+  .border-blu-color{
+    border-left: 3px solid blue;
+  }
+
+  
+  .education-area span{
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .education-area p{
+    margin-top: 10px;
+  }
+
+  .mar-top-10px{
+margin-top: 10px;
+  }
+
+
+  .education-area{
+padding-bottom: 20px;
+  }
+
+    /* Education css end */
+
+
+    /* type text */
+    /* styles.css */
+
+
+/* service css */
+
+
+.div-30per{
+  width: 30%;
+  float: left;
+  padding-right: 20px;
+}
+
+.bg-black{
+background-color: #1e1d1d;
+color: white;
+}
+
+.Services{
+  padding: 30px;
+  height: 200px;
+}
+
+.Services p{
+  margin-top: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  padding-bottom: 25px;
+  color: #eea302;
+  font-size: 20px;
+  font-size: 20px;
+
+  
+}
+
+
+.Service-dev1{
+position: relative;
+top: 30px;
+}
+
+
+.pricing-area{
+  position: relative;
+  top: 50px;
+}
+
+.pricing-dev2{
+
+}
+
+
+
+/* contact */
+
+.div-50per{
+width: 50%;
+float: left;
+}
+
+
+.input{
+  width: 300px;
+    height: 40px;
+    border-radius: 40px;
+    border: 3px solid #eea302;
+}
+
+
+label{
+  font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.field1{
+  margin-top: 30px;
+}
+
+.div-20per{
+width: 20%;
+}
+
+.div-12per{
+  width: 12%;
+  }
+.mar-top10{
+  margin-top: 10px;
+}
+
+
+.line-h{
+  line-height: 2;
+}
